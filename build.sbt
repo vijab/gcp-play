@@ -51,6 +51,8 @@ javaOptions in reStart ++= Seq("-Dlogback.configurationFile=logback.xml", "-Dcon
 
 javaOptions in run ++= Seq("-Dlogback.configurationFile=logback.xml", "-Dconfig.file=src/main/resources/application.conf")
 
+enablePlugins(JavaAppPackaging)
+
 scalacOptions in compile ++= Seq(
   "-deprecation",
   "-encoding", "UTF-8", // yes, this is 2 args

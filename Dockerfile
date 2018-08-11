@@ -1,4 +1,5 @@
-FROM openjdk:8
+FROM frolvlad/alpine-scala
+RUN apk add --no-cache curl
 RUN \
   curl -L -o sbt-1.1.1.deb http://dl.bintray.com/sbt/debian/sbt-1.1.1.deb && \
   dpkg -i sbt-1.1.1.deb && \
